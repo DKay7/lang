@@ -1,0 +1,89 @@
+def FUNCNAME (PARAM1, PARAM2):
+    ...
+    return 
+
+// ooki = '{'
+// yamete kudasai = '}'
+// ehhh = ';'
+// onichan whats this = 'FUNCDEF'
+// uwu = 'VARDEF'
+// kane = 'return'
+// yoku naai = 'if'
+// yamenaide = 'while'
+
+
+// <З = ( | )
+// is so big = '>'
+// is so big but not as mine  = '>='
+// is so small = '<'
+// is samller than mine = '<='
+// is just as mine = '=='
+// is not just as mine = '!='
+
+// koko = '='
+// twosome = '*'
+// helps cum = '+'
+// sucks = '-'
+// shares his dick with = '\'
+// treesome = '^'
+
+// put it outta me = '//' (comment kword)
+
+function:
+
+onichan whats this FUNCNAME <3 baka PARAM1 senpai baka PARAM2 <3
+ooki \\ {
+
+    uwu VAR_NAME ehhh
+    VAR_NAME koko CALL_FUNCTION <3 baka param1 senpai baka param2 <3 ehhh
+
+    kane VAR_NAME ehhh \\ return 
+yamete kudasai \\ }
+
+if:
+yoku naai <3 CONDITION <3 
+ooki
+    ...
+yamete kudasai
+
+while:
+yamenaide <3 CONDITION <3
+ooki
+    ...
+
+
+EBNF:
+
+<PROGRAM>   ::= <FUNCTION>* <MAIN> <FUNCTION>*
+<MAIN>      ::= "onichan whats this" "main" "<3" "<3"
+                "ooki" <BODY> "yamete kudasai"
+
+<FUNCTION>  ::= "onichan whats this" <NAME> "<3" {"baka" <NAME> {"senpai" "baka" <NAME>}*}? "<3"
+                "ooki" <BODY> "yamete kudasai"
+
+<BODY>      ::= {<OPERATOR>}+
+<OPERATOR>  ::= {<ASSIGMENT> | <CALL> | <RETURN>}"ohhh" | <IF> | <WHILE>
+
+<ASSIGMENT> ::= <NAME> "koko" <EXPRESSION>
+<CALL>      ::= <NAME> "<3" {"baka" {<NAME> | <NUMBER>} {"senpai" "baka" {<NAME> | <NUMBER>}}*}? "<3"
+<RETURN>    ::= "kane" <EXPRESSION>
+
+<IF>        ::= "yoku naai" "<3" <CONDITION> "<3"
+                "ooki" <BODY> "yamete kudasai"
+
+<WHILE>     ::= "yamenaide" "<3" <CONDITION> "<3"
+                "ooki" <BODY> "yamete kudasai"
+
+<CONDITION> ::= <EXPRESSION> {  "is so big"         | "is so big but not as mine" 
+                              | "is so small"       | "is samller than mine" 
+                              | "is just as mine"   | "is not just as mine" } 
+                <EXPRESSION>
+
+<EXPRESSION>::= <TERM> {"helps cum" | "sucks"} <EXPRESSION>
+<TERM>      ::= <POWER> {"twosome" | "shares his dick with"} <TERM>
+<POWER>     ::= <UNARY> "treesome" <POWER>
+<UNARY>     ::= {{"ln" | "sin" | "cos"} <UNARY>} | <PARENTHS>
+<PARENTHS>  ::= "<3" <EXPRESSION> "<3" | <NAME> | <NUMBER>
+
+<NAME>      ::= [A-z_]+[A-z_-0-9]*
+<NUMBER>    ::= {"-"}? [0-9]+ {.[0-9]+}?
